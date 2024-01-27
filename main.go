@@ -38,6 +38,10 @@ func createBlock(index int, data string, prevHash string) *Block {
 
 func main() {
 	// Creating a new block
-	genesisBlock := createBlock(0, "Genesis Block", "")
-	fmt.Println("Genesis Block:", genesisBlock)
+	start := time.Now()
+	createBlock(0, "Genesis Block", "")
+	end := time.Now()
+	elapsed := end.Sub(start)
+	fmt.Println("Mining Time:", elapsed)
+	//fmt.Println("Genesis Block:", genesisBlock)
 }
